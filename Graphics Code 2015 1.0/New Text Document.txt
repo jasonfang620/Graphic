@@ -1,0 +1,72 @@
+	for (int x = 0; x < LIGHTNUM; ++x) {
+		for (int z = 0; z < LIGHTNUM; ++z) {
+
+
+			float xPos = (RAW_WIDTH * HEIGHTMAP_X / (LIGHTNUM - 1)) * x;
+			float zPos = (RAW_HEIGHT * HEIGHTMAP_Z / (LIGHTNUM - 1)) * z;
+
+			float r = 0.5f + (float)(rand() % 129) / 128.0f;
+			float g = 0.5f + (float)(rand() % 129) / 128.0f;
+			float b = 0.5f + (float)(rand() % 129) / 128.0f;
+
+			float radius = (RAW_WIDTH * HEIGHTMAP_X / LIGHTNUM);
+			addlight(Vector3(xPos, 100.0f, zPos), Vector4(r, g, b, 1.f), radius);
+		}
+
+	for (unsigned i = 0; i < lightVector.size(); i++)
+		{
+			lightColour[i] = lightVector[i]->GetColour();
+			lightPos[i] = lightVector[i]->GetPosition();
+			lightRadius[i] = lightVector[i]->GetRadius();
+		}
+
+
+
+
+
+
+
+for (unsigned i = 0; i < lightVector.size(); i++)
+	{
+		delete (lightVector[i]);
+		lightVector[i] = nullptr;
+	}
+
+
+void Renderer::addlight(Vector3 position, Vector4 colour, float radius) {
+	
+
+	if (lightVector.size() < Renderer::MAX_LIGHT_COUNT)
+	{
+		lightVector.push_back(new Light(position, colour, radius));
+	}
+		
+}
+
+void Renderer::DrawPointLights()
+{
+	SetCurrentShader(pointlightShader);
+	glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "lightCount"), lightVector.size());
+
+	for (unsigned i = 0; i < 64; i++)
+	{
+		ostringstream lcolourss;
+		lcolourss << "lightColour[" << i << "]";
+		string lcstr = lcolourss.str();
+
+		glUniform4f(glGetUniformLocation(currentShader->GetProgram(), lcstr.c_str()),
+			lightColour[i].x, lightColour[i].y, lightColour[i].z, lightColour[i].w);
+
+
+		ostringstream lpositionss;
+		lpositionss << "lightPos[" << i << "]";
+		string lpstr = lpositionss.str();
+
+		glUniform3f(glGetUniformLocation(currentShader->GetProgram(), lpstr.c_str()),lightPos[i].x, lightPos[i].y, lightPos[i].z);
+
+		ostringstream lradiuss;
+		lradiuss << "lightRadius[" << i << "]";
+		string lrstr = lradiuss.str();
+		glUniform1f(glGetUniformLocation(currentShader->GetProgram(), lrstr.c_str()), lightRadius[i]);
+	}
+}

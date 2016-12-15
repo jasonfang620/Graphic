@@ -1,0 +1,11 @@
+﻿Build started 02/11/2016 16:34:41.
+     1>Project "E:\practise\graphic\Graphics For Games\3) Texturing\Tutorial3.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\practise\graphic\Graphics For Games\Debug\Tutorial 03 - Texturing.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\practise\graphic\Graphics For Games\Debug\Tutorial 03 - Texturing.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\practise\graphic\Graphics For Games\Debug\Tutorial 03 - Texturing.lib" /MACHINE:X86 /ignore:4099 Debug\Renderer.obj
+         Debug\tutorial3.obj
+         Tutorial3.vcxproj -> E:\practise\graphic\Graphics For Games\Debug\Tutorial 03 - Texturing.exe
+     1>Done Building Project "E:\practise\graphic\Graphics For Games\3) Texturing\Tutorial3.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.18

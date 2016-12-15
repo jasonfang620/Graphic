@@ -1,0 +1,20 @@
+﻿Build started 24/11/2016 12:39:03.
+     1>Project "E:\Project\Graphics Code 2015\Graphics For Games\Extra - Geometry Shaders\Geometry.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet ParticleEmitter.cpp Renderer.cpp "Geometry Shaders.cpp"
+         Geometry Shaders.cpp
+         Renderer.cpp
+     1>e:\project\graphics code 2015\graphics for games\extra - geometry shaders\renderer.cpp(45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+         ParticleEmitter.cpp
+         Running Code Analysis for C/C++...
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Project\Graphics Code 2015\Graphics For Games\Debug\Extra - Geometry Shaders.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Project\Graphics Code 2015\Graphics For Games\Debug\Extra - Geometry Shaders.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Project\Graphics Code 2015\Graphics For Games\Debug\Extra - Geometry Shaders.lib" /MACHINE:X86 Debug\ParticleEmitter.obj
+         Debug\Renderer.obj
+         "Debug\Geometry Shaders.obj"
+     1>LINK : fatal error LNK1104: cannot open file 'nclgl.lib'
+     1>Done Building Project "E:\Project\Graphics Code 2015\Graphics For Games\Extra - Geometry Shaders\Geometry.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:15.31
